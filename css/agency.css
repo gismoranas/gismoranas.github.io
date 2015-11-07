@@ -689,7 +689,7 @@ ul.social-buttons li a:active {
 }
 .portfolio-modal .close-modal .lr {
   height: 75px;
-  width: 2px;
+  width: 1px;
   margin-left: 35px;
   background-color: #222;
   transform: rotate(45deg);
@@ -701,7 +701,7 @@ ul.social-buttons li a:active {
 }
 .portfolio-modal .close-modal .lr .rl {
   height: 75px;
-  width: 2px;
+  width: 1px;
   background-color: #222;
   transform: rotate(90deg);
   -ms-transform: rotate(90deg);
