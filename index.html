@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/agency.css" rel="stylesheet">
+    <link href="css/bootstrap-datepicker.css" rel="stylesheet" type="text/css">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -56,10 +57,10 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#portfolio">places</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">places</a>
+                        <a class="page-scroll" href="#services">booking</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">About</a>
@@ -87,44 +88,6 @@
             </div>
         </div>
     </header>
-
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">E-Commerce</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Responsive Design</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Web Security</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Portfolio Grid Section -->
     <section id="portfolio" class="bg-light-gray">
@@ -181,6 +144,69 @@
             </div>
         </div>
     </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">booking</h2>
+                    <h3 class="section-subheading text-muted">You would like to stay at one of hour hostels or visit our restaurant? Here you are!</h3>
+                </div>                
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <select class="form-control" name="location">
+                            <option disabled selected hidden>Where?</option>
+                            <option value="lodge">Lodge & Family House</option>
+                            <option value="uemachi">Uemachi Guest House</option>                                
+                        </select>            
+                        <p class="help-block text-danger"></p>
+                        <div class="form-group">
+                            <div class="input-daterange" id="datepicker">
+                                <input type="text" class="input-md form-control" name="arrival" placeholder="Arrival"/>
+                                <p class="help-block text-danger"></p>
+                                <input type="text" class="input-md form-control" name="departure" placeholder="Departure"/>
+                                <p class="help-block text-danger"></p>                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                            <select class="form-control" name="location">
+                                <option disabled selected hidden>No. Of People?</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>                                
+                                <option value="3">3</option>
+                                <option value="4">4</option>                                
+                                <option value="5">5</option>
+                                <option value="6">6</option>                                
+                                <option value="7">7</option>
+                                <option value="8">8</option>                                
+                            </select>
+                            </div>
+                            <div class="col-lg-6">
+                            <select class="form-control" name="location">
+                                <option disabled selected hidden>Male Or Female?</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>                                                            
+                            </select>            
+                            <p class="help-block text-danger"></p>                             
+                            </div>
+                        </div>
+                        <div class="text-center">                    
+                            <button type="button" class="btn btn-xl"><i class="fa fa-check"></i> book now!</button>
+                        </div>  
+                    </div>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+
+        </div>
+    </section>
+
 
     <!-- About Section -->
     <section id="about">
@@ -641,7 +667,19 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
-
+    <script src="/js/bootstrap-datepicker.js"></script>
+    <script>
+      $('#datepicker.input-daterange').datepicker({
+          format: "dd/mm/yyyy",
+          todayBtn: true,
+          keyboardNavigation: false,
+          autoclose: true,
+          orientation: "bottom",
+          todayHighlight: true,
+          startDate: '0d',
+          endDate: '+1y'
+      });
+    </script>
 </body>
 
 </html>

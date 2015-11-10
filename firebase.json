@@ -1,9 +1,8 @@
 {
-  "firebase": "amber-heat-6460",
+  "firebase": "vitti-world",
   "public": ".",
   "ignore": [
     "firebase.json",
-    "**/.*",
     "**/node_modules/**"
   ]
 }
